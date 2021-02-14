@@ -1,0 +1,35 @@
+.open-first-nav {
+    @media (max-width: $md) {
+        position: absolute;
+        visibility: visible;
+        background-color: $white;
+        padding-top: 53px;
+        padding-bottom: 12px;
+        top: -13px;
+        width: 50%;
+        min-width: 180px;
+        height: auto;
+        left: 0;
+        z-index: 2;
+        &>ul {
+            @include flex-box (column nowrap, space-between)
+        }
+    }
+
+}
+
+.open-second-nav {
+    @media (max-width: $md) {
+        visibility: visible;
+        position: absolute;
+        background-color: $white;
+        top: 255px;
+        width: 50%;
+        min-width: 180px;
+        height: auto;
+        left: 0;
+        z-index: 3;
+        flex-direction: column;
+        border-top: 1px solid $ghost;
+    }
+}

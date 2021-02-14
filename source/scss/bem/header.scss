@@ -1,0 +1,169 @@
+.header {
+    font-size: 13px;
+    background-color: $white;
+    max-width: 1400px;
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 100px;
+    @media (max-width: $sm) {
+        font-size: 10px;
+        margin-bottom: 20px;           
+    }
+
+}
+
+.header__main {
+    @include flex-box(row nowrap, space-between);
+    flex-basis: 213px;
+    @media (max-width: $sm) {
+        flex-basis: 190px;
+    }
+}
+
+.header__logo {
+    margin-top: -14px;
+}
+
+.header__title {
+    font-style: italic;
+    flex-basis: 133px;
+    @include font(13px, 400);
+    @media (max-width: $sm) {
+        font-size: 11px;
+    }
+}
+
+.header__title_red-text {
+    color: $red;
+}
+
+.header__yandex-rating {
+    padding: 5px 12px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+    @media (max-width: $lg) {
+        display: none;
+    }
+}
+
+.header__central {
+    @include flex-box(row nowrap, space-between);
+    padding-top: 30px;
+    @media (max-width: $md) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media (max-width: $sm) {
+        padding-top: 18px;
+    }
+    
+}
+
+.header__form-search {
+    flex-basis: 44.5%;
+    @media (max-width: $lg) {
+        flex-basis: 40%;
+    }
+    @media (max-width: $md) {
+        order: 1;
+        flex-basis: 60%;
+        align-self: center;
+        margin-top: 10px;
+    }
+    @media (max-width: $sm) {
+        flex-basis: 80%;
+    }
+}
+
+.header__links {
+    @include flex-box (row nowrap, space-between);
+}
+
+.header__link-login {
+    font-weight: 600;
+    padding-top: 10px;
+    display: flex;
+    @media (max-width: $sm) {
+        font-size: 0;
+        padding-top: 0;
+    }
+}
+
+
+.header__login-icon {
+    width: 15px;
+    height: 18px;
+    margin-right: 10px;
+    fill: $red;
+    @media (max-width: $sm) {
+        width: 23px;
+        height: 27px;           
+    }
+}
+
+.header__link-store {
+    padding: 9px 16px;
+    display: flex;
+    font-weight: 600;
+    margin-left: 50px;
+    @media (max-width: $lg) {
+     padding: 9px 12px;
+     min-width: 120px;
+     margin-left: .7em;
+    }
+    @media (max-width: $sm) {
+        font-size: 0;
+        min-width: 0;
+        max-width: 40px;
+        padding: 4px 6px;
+        max-height: 28px;       
+    }
+}
+
+
+
+.header__shopping-icon {
+    width: 20px;
+    height: 16px;
+    fill: $white;
+    margin-right: 10px;
+    @media (max-width: $sm) {
+        height: 20px;
+        margin-right: 0;         
+    }
+}
+
+.header__nav {
+    margin-top: 13px;
+    @media (max-width: $md) {
+        margin: 0;
+    }
+}
+
+.header__hr {
+    width: 100%;
+    border-bottom: 1px solid $ghost;
+    margin: 21px 0;
+}
+
+.header__services {
+    padding-bottom: 22px;
+    @media (max-width: $md) {
+        visibility: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+}
+
+
+.header__btn-menu {
+    display: none;
+    @media (max-width: $md) {
+        display: inline-block;
+        position: relative;
+        top: -10px;
+    }
+}
+

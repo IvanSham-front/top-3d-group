@@ -1,0 +1,74 @@
+.yellow-bar {
+    background-color: $yellow;
+    font-weight: 600;
+    @media (max-width: $lg) {
+        font-size: 11px;
+    }
+    @media (max-width: 400px) {
+        font-size: 9px;
+    }
+}
+
+.yellow-bar__content {
+    padding: 7px 0;
+    @include flex-box(row nowrap, space-between);
+}
+
+.yellow-bar__text {  
+    text-decoration: none;
+    @media (max-width: $md) {
+        text-align: center;
+    }
+}
+
+
+.yellow-bar__text_central {
+    margin: 0 15px;
+    @media (max-width: $lg) {
+        margin: 0 13px;       
+       }
+}
+
+.yellow-bar__city{
+    &::after {
+        content: '\02C5';
+        margin-left: 5px;
+
+    }
+}
+
+.yellow-bar__social {
+    display: inline-block;
+    @media (max-width: $md) {
+        @include flex-box(row nowrap, center);
+    }
+}
+
+.yellow-bar__icon {
+    width: 16px;
+    height: 14px;
+    margin-left: 17px;
+    @media (max-width: $lg) {
+        margin-left: 10px;
+        width: 14px;
+    }
+}
+
+.yellow-bar__left {
+    @media (max-width: $lg) {
+        @include flex-box(row nowrap, flex-start);
+    }
+    @media (max-width: $md) {
+        flex-direction: column;
+    }
+}
+
+.yellow-bar__right {
+    @media (max-width: $lg) {
+        @include flex-box(row nowrap, flex-end);
+    }
+    @media (max-width: $md) {
+        flex-direction: column;   
+    }
+}
+

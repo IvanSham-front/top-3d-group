@@ -1,0 +1,102 @@
+.company-info {
+    font-family: $SFText;
+    line-height: 19px;
+    letter-spacing: -0.7px
+}
+
+.company-info__photo {
+    max-width: 100%;
+}
+
+.company-info__text-block {
+    @include flex-box(row nowrap, space-between);
+    margin-top: 50px;
+    @media (max-width: $sm) {
+        flex-direction: column;           
+    }
+    @media (max-width: $sm) {
+        margin-top: 10px;           
+    }
+}
+
+.company-info__left-block {
+    flex-basis: 333px;
+    @include flex-box (column nowrap, space-between);
+    align-items: flex-start;
+    @media (max-width: $lg) {
+        margin-right: 15px;
+    }
+    @media (max-width: $sm) {
+        align-items: center;  
+        justify-content: flex-start; 
+        flex-basis: auto;
+        margin-right: 0;    
+    }
+}
+
+.company-info__title {
+    @include font(27px, 400);
+    font-family: $SFDisplay;
+    line-height: 32px;
+    margin-bottom: 40px;
+    letter-spacing: normal;
+    @media (max-width: $lg) {
+        font-size: 24px;
+    }
+    @media (max-width: $sm) {
+        text-align: center;
+        font-size: 19px;
+        margin-bottom: 10px;  
+    }
+}
+
+.company-info__btn {
+    min-width: 280px;
+    min-height: 44px;
+    padding: 12px 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: none;
+    @media (max-width: $sm) {
+        margin-bottom: 7px;
+        font-size: 15px;
+        min-width: 220px;          
+    }
+}
+
+.company-info__small-text {
+    @include font(14px, 500);
+    font-family: $SFText;
+    color: $greySmallText;
+    @media (max-width: $sm) {
+        font-size: 11px;
+        text-align: center;           
+    }
+}
+
+.company-info__right-block {
+    flex-basis: 708px;
+    @media (max-width: $lg) {
+        flex-basis: 65%;
+    }
+    @media (max-width: $sm) {
+        order: -1;           
+    }
+}
+
+.company-info__text {
+    @include font(16px, 500);
+    margin-bottom: 12px;
+    letter-spacing: -0.7px;
+    @media (max-width: $lg) {
+        font-size: 13px;
+    }
+}
+
+.company-info__link {
+    text-decoration: underline;
+}
+
+.company-info__footer-block {
+    margin-top: 20px;
+}

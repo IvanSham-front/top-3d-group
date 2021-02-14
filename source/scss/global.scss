@@ -1,0 +1,46 @@
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    min-width: 320px;
+    min-height: 550px;
+    line-height: 17.7px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 ;
+    border:0 ;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+}
+
+.fixed-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @media (max-width: $lg) {
+     max-width: $lg - 24px;
+     padding: 0 12px;   
+    }
+    @media (max-width: $md) {
+        max-width: $md - 24px;
+    }
+    @media (max-width: $sm) {
+        max-width: $sm - 26px;
+        padding: 0 13px;
+    }
+    @media (max-width: $m) {
+        min-width: $m
+    }
+}
+
+.red-text {
+    color: $red;
+}

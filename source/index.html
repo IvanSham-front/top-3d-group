@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/open-sans-400.woff2" as="font">
+    <link rel="preload" href="fonts/open-sans-600.woff2" as="font">
+    <link rel="preload" href="fonts/open-sans-700.woff2" as="font">
+
+    <link rel="preload" href="fonts/SFProDisplay-400.woff2" as="font">
+    <link rel="preload" href="fonts/SFProText-500.woff2" as="font">
+
+    <link rel="stylesheet" type="text/css" href="styles/styles-min.css">
+    
+    <title>Top 3d-group</title>
+</head>
+<body>
+    <header class="header">
+            <div class="header__yellow-bar yellow-bar">
+                <div class="fixed-container yellow-bar__content">
+                    <div class="yellow-bar__left">
+                        <a href="#" class="yellow-bar__text yellow-bar__city">Санкт-Петербург</a>
+                        
+                        <a href="tel:+78126135838" class="yellow-bar__text yellow-bar__text_central">+7 (812) 613-58-38</a>
+        
+                        <span class="yellow-bar__text yellow-bar__text_none">Пн–пт 10:00–19:00, сб-вс 10:00–17:00</span>
+                    </div>
+        
+                    <div class="yellow-bar__right">
+                        <a href="#" class="yellow-bar__text">Напишите нам</a>
+                        
+                        <a href="#" class="yellow-bar__text yellow-bar__text_central">Свяжитесь с директором</a>
+        
+                        <div class="yellow-bar__social">
+                            <a href="#" class="yellow-bar__link" aria-label="telegram">
+                                <svg class="yellow-bar__icon">
+                                    <use xlink:href="img/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                            
+                            <a href="#" class="yellow-bar__link" aria-label="skype">
+                                <svg class="yellow-bar__icon">
+                                    <use xlink:href="img/sprite.svg#skype"></use>
+                                </svg>
+                            </a>
+        
+                            <a href="#" class="yellow-bar__link" aria-label="viber">
+                                <svg class="yellow-bar__icon">
+                                    <use xlink:href="img/sprite.svg#viber"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed-container">
+                <div class="header__central">
+                    <button class="btn-menu header__btn-menu" 
+                    id="dropDownMenu_js"
+                    aria-expanded="false" aria-controls="hiddenMenu-js" 
+                    aria-label="Развернуть меню">
+                        <svg class="btn-menu__icon">
+                            <use xlink:href="img/sprite.svg#menu"></use>
+                        </svg>
+                    </button>
+
+                    <div class="header__main">
+                        <picture>
+                            <source
+                            type="image/webp"
+                            media="(max-width: 576px)" 
+                            srcset="
+                                img/logo-small.webp 1x,
+                                img/logo-small-2x.webp 2x">
+    
+                            <source 
+                            media="(max-width: 576px)" 
+                            srcset="
+                                img/logo-small.png 1x,
+                                img/logo-small-2x.png 2x">
+    
+                            <source 
+                            type="image/webp" 
+                            srcset="
+                                img/logo.webp 1x, 
+                                img/logo-2x.webp 2x">
+    
+                            <img 
+                            src="img/logo.png" 
+                            srcset="img/logo-2x.png 2x"
+                            alt="logo" 
+                            class="header__logo">
+                        </picture>
+                        
+                        <h1 class="header__title">
+                            Ваш эксперт на рынке <span class="header__title_red-text">3D</span>-техники
+                        </h1>
+                    </div>
+
+                    <picture>
+                        <source 
+                        type="image/webp" 
+                        srcset="
+                            img/yandex-rating.webp 1x, 
+                            img/yandex-rating-2x.webp 2x">
+
+                        <img 
+                        src="img/yandex-rating.jpg" 
+                        srcset="img/yandex-rating-2x.jpg 2x"
+                        alt="yandex" 
+                        class="header__yandex-rating">
+                    </picture>
+                    
+                    <form class="header__form-search form-search">
+                        <input type="search" name="search" class="form-search__input-text" placeholder="Введите запрос, например, Formlabs Form 2">
+                        <button type="submit" class="form-search__button">Найти</button>
+                    </form>
+
+                    <div class="header__links">
+                        <a href="#" class="header__link-login" aria-label="login">
+                            <svg class="header__login-icon">
+                                <use xlink:href="img/sprite.svg#login"></use>
+                            </svg>
+                            Войти
+                        </a>
+    
+                        <a href="#" class="btn header__link-store" aria-label="store">
+                            <svg class="header__shopping-icon">
+                                <use xlink:href="img/sprite.svg#shopping-cart"></use>
+                            </svg>
+                            Корзина пуста
+                        </a>
+                    </div>
+                </div>
+
+                <div class="overlay" id="overlay"></div>
+                
+                <nav class="header__nav first-nav" aria-controls="dropDownMenu_js" id="firstNavHidden">
+                    <ul class="first-nav__list">
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Акции</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">О нас</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Мероприятия</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Оплата и доставка</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Что с моим заказом?</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Гос. закупки</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Блог</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Мастер-классы</a>
+                        </li>
+                        <li class="first-nav__item">
+                            <a href="#" class="first-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <button class="btn-close first-nav__button" id="btnClose">
+                        <svg class="btn-close__icon">
+                            <use xlink:href="img/sprite.svg#close-button"></use>
+                        </svg>
+                    </button>
+                </nav>
+            </div> 
+            
+            <div class="header__hr"></div>
+            
+            <div class="fixed-container">
+                <ul class="first-nav__list services header__services" aria-controls="dropDownMenu_js" id="secondNavHidden">
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">3D-принтеры</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">3D-сканеры</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Станки</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Роботы</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Образование</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Стоматологам</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Гаджеты</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Материалы</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">ПО</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="" class="services__link first-nav__link_bold">Решения</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Учебный центр</a>
+                    </li>
+                    <li class="services__item">
+                        <a href="#" class="services__link first-nav__link_bold">Услуги</a>
+                    </li>
+                </ul>
+
+            </div>
+    </header>
+
+    <main>
+        <div class="fixed-container">
+            <section class="company-info">
+                <picture>
+                    <source 
+                    type="image/webp"
+                    srcset="
+                        img/employees.webp 1x,
+                        img/employees-2x.webp 2x" 
+                    >
+
+                    <img 
+                    class="company-info__photo"
+                    src="img/employees.jpg" 
+                    srcset="img/employees-2x.jpg 2x"
+                    alt="photo of employees">
+                </picture>
+                
+                <div class="company-info__text-block">
+                    <div class="company-info__left-block">
+                        <h2 class="company-info__title">Твоя работа в крупнейшем интеграторе цифрового производства</h2>
+        
+                        <button class="btn company-info__btn">Отправить резюме</button>
+        
+                        <span class="company-info__small-text">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</span>
+                    </div>
+        
+                    <div class="company-info__right-block">
+                        <p class="company-info__text">Top 3D Shop – лидер по продажам 3D-оборудования в России и странах СНГ. В 2018 мы стали лучшим интегратором 
+                            3D оборудования по аддитивным технологиям и цифровому производству по версии 
+                            <a class="red-text company-info__link" href="#">3D Print Awards.</a>
+                        </p>    
+        
+                        <p class="company-info__text">За 6 лет работы более 10 000 клиентов по всей России и СНГ выбрали Top 3D Shop. В 2018 наш оборот составил 600 млн. рублей,
+                             в компании работает более 100 сотрудников.
+                        </p>
+                        <p class="company-info__text">Новая цель: 1 млрд торгового оборота в этом году и выход на международные рынки. Если вы — целеустремленный специалист,
+                             готовый учиться новым навыкам и учить других, мыслите не просто как исполнитель, а как владелец своего направления, то нам по пути!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="company-info__footer-block about-us">
+                    <h2 class="about-us__title">Лучше один раз увидеть:</h2>
+    
+                    <ul class="about-us__list">
+                        <li class="about-us__item">
+                            <a href="#" class="about-us__link">Как устроена наша компания изнутри</a>
+                        </li>
+                        <li class="about-us__item">
+                            <a href="#" class="about-us__link">Как создавалась компания - необычная история</a>
+                        </li>
+                        <li class="about-us__item">
+                            <a href="#" class="about-us__link">Читай о нас на 3D Today</a>
+                        </li>
+                    </ul>
+                </div>
+            </section> <!--company-info-->
+
+
+
+            <section class="video-about-us">
+                <div class="video-about-us__head">
+                    <h2 class="video-about-us__title">Видео о нас</h2>
+                    <div class="video-about-us__buttons buttons-arrow">
+                        <button class="buttons-arrow__btn buttons-arrow__btn_left">&#5176;</button>
+                        <button class="buttons-arrow__btn">&#5171;</button>
+                    </div>
+                </div>
+
+                <ul class="video-about-us__list">
+                    <li class="video-about-us__item">
+                        <picture>
+                            <source 
+                            srcset="
+                            img/video1.webp 1x,
+                            img/video1-2x.webp 2x" 
+                            type="image/webp">
+                            <img 
+                            src="img/video1.jpg"
+                            srcset="img/video1-2x.jpg 2x"
+                            alt="video"
+                            class="video-about-us__video">
+                        </picture>
+                    </li>
+                    <li class="video-about-us__item video-about-us__video_none">
+                        <picture>
+                            <source 
+                            srcset="
+                            img/video2.webp 1x,
+                            img/video2-2x.webp 2x" 
+                            type="image/webp">
+                            <img 
+                            src="img/video2.jpg"
+                            srcset="img/video2-2x.jpg 2x"
+                            alt="video"
+                            class="video-about-us__video">
+                        </picture>                   
+                    </li>
+                </ul>
+
+
+            </section>
+        </div>
+    </main> 
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
